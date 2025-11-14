@@ -21,7 +21,7 @@
 <body class="bg-white text-black">
 
     <!-- HEADER -->
-    <header class="relative w-full border-b border-gray-200 flex items-center justify-center h-16">
+    <header class="fixed top-0 relative w-full border-b border-gray-200 flex items-center justify-center h-16">
         <div class="absolute left-0 flex overflow-x-auto scrollbar-hide space-x-6 px-4 py-3 items-center">
             <svg aria-hidden="true" class="swoosh-svg" focusable="false" viewBox="0 0 24 24" role="img" width="48px"
                 height="56px" fill="none">
@@ -104,20 +104,20 @@
     <section class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-10">
         <!-- 1. Nike kill shot -->
         <div class="relative group overflow-hidden">
-            <img src="2255ae83119f2ef1f7bacc3c51f4068f.jpg"
-                class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
+            <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_688,c_limit/de9f23f0-3d1c-4324-9a81-73dd96e6bb4a/nike-just-do-it.png"
+                class=" w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition"></div>
             <div class="absolute bottom-6 left-6 text-white">
                 <h3 class="text-lg font-semibold">Nike Killshot</h3>
                 <p class="text-xl mb-3">Courtside Attitude with a Modern Touch</p>
                 <button
                     class="bg-white text-black px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-gray-200">Shop</button>
-
             </div>
         </div>
         <!-- 2. Nike united -->
         <div class="relative group overflow-hidden">
-            <img src="34cfac0c371e95da20857e6d00c48255.jpg" alt="Nike united"
+            <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_749,c_limit/bf7722b8-c57a-46bb-a67c-958cec33e63c/nike-just-do-it.jpg"
+                alt="Nike united"
                 class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition"></div>
             <div class="absolute bottom-6 left-6 text-white">
@@ -129,7 +129,8 @@
         </div>
         <!-- 3. Nike 24.7 -->
         <div class="relative group overflow-hidden">
-            <img src="8c18fbd65adefc458588dd9bc57c8dc9.jpg" alt="Nike 24.7"
+            <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_710,c_limit/42100b40-2278-4f2e-b54a-0bebc0bed59b/nike-just-do-it.jpg"
+                alt="Nike 24.7"
                 class="w-full h-[400px] object-cover transition-transform duration-500 group-hover-scale-105">
             <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition"></div>
             <div class="absolute bottom-6 left-6 text-white">
@@ -142,7 +143,8 @@
 
         <!-- 4.Jordan -->
         <div class="relative group overflow-hidden">
-            <img src="1 (1).jpg" alt="jordan"
+            <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_756,c_limit/db1f9109-11d5-4fa5-9423-a90a9ec99468/nike-just-do-it.png"
+                alt="jordan"
                 class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
             <div class="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition"></div>
             <div class="absolute bottom-6 left-6 text-white">
@@ -158,10 +160,16 @@
     <!-- POPULAR & SECTION -->
     <section class=overflow-hidden>
         <!-- RIGHT BLOCK (WHITE) -->
-        <div id="popular" class="bg-white text-black w-full px-6 py-10">
+        <div id="popularSection" class="bg-white text-black w-full px-6 py-10">
             <!-- Tiêu đề + icon -->
             <div class="flex justify-between items-center mb-6">
                 <h2 class="text-lg font-bold tracking-wide">POPULAR</h2>
+                <div class="flex gap-3">
+                    <button id="prevBtn"
+                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">←</button>
+                    <button id="nextBtn"
+                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">→</button>
+                </div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -169,83 +177,86 @@
                 </svg>
             </div>
             <!-- Mô tả -->
-            <div class="flex space-x-4 overflow-x-auto scrollbar-hide mb-12 overflow-hidden ">
+            <div id="viewport" class="flex space-x-4 overflow-x-auto scrollbar-hide mb-12 overflow-hidden ">
                 <!-- SLIDER -->
-                <div id="slider" class="flex-shrink-0 w-[350px] bg-gray-100 text-center h-[300px]">
-                    <img src="991708d0-6624-498b-ba08-9ab9b297a06d.png" alt="Shoe 1"
-                        class="mx-auto h-[200px] w-[350px] bg-transparent mt-20" />
-                    <p class="mt-9 text-lg font-medium transform -ml-20">Jordan 1 Retro High OG GS
-                        'Chicago' 2015</p>
-                    <p class="text-sm -ml-60 translate-x-5 font-medium text-gray-500">Men's Shoes</p>
-                    <p class="text-lg font-semibold transform translate-x-16 -ml-80 ">3,946,500₫</p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="flex-shrink-0 w-[300px] text-center h-[300px] bg-gray-100">
-                    <img src="761030a7-9e59-4421-ada9-a4fb7b61c96c.png" alt="Air Dunk Low"
-                        class=" mx-auto h-[200px] w-[350px] translate-x-4 translate-y-20 ">
-                    <p class="mt-9 text-xl font-semibold -ml-48 translate-y-20">Nike Total 90</p>
-                    <p class=" text-sm font-medium text-gray-500 -ml-64 translate-x-3 transform translate-y-20">
-                        Men's
-                        Shoes
-                    </p>
-                    <p
-                        class="text-lg font-medium mt-3 text-gray-700 transform -ml-60 translate-x-2 translate-y-16 text-black ">
-                        2,069,000₫
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="flex-shrink-0 w-[300px] text-center h-[300px] bg-gray-300">
-                    <img src="926efa4b-1695-45bd-ae8d-b07af09e8eff.png" alt="Air Force 1"
-                        class=" w-[300px] h-[200px] mx-auto -translate-y-5 mt-20">
-                    <p class="text-xl font-medium mt-8 -ml-40 translate-x-1">Air Jordan Mule</p>
-                    <p class="text-sm font-medium mt-4 text-gray-500 translate-x-1 -translate-y-3 -ml-60 ">
-                        Golf
-                        Shoes
-                    </p>
-                    <p
-                        class=" font-bold text-lg font-medium mt-2 text-gray-700 transform -ml-60 translate-x-3 -translate-y-6 text-black">
-                        3,239,000₫
-                    </p>
-                </div>
-                <!-- Card 4 -->
-                <div class="flex-shrink-0 w-[300px] text-center h-[300px] bg-gray-100 ">
-                    <img src="d1872a9e-0fbe-41f4-a10d-e3d48d5ba133.png" alt="Nike Air Monarch IV “White/Navy”"
-                        class="w-[300px] h-[200px] mx-auto -translate-y-5 mt-20">
-                    <p class="text-xl font-medium mt-8 -ml-56 translate-x-2 ">Nike Calm</p>
-                    <p class="text-sm font-medium mt-4 text-gray-500 translate-x-2 -translate-y-3 -ml-60 ">
-                        Men's
-                        Mules
-                    </p>
-                    <div
-                        style="position:relative; left:1; text-align:left; margin:0; padding:0; top: -16px; font-size: 18px;">
-                        <span style="text-color:black; font-weight: 500; margin:0;">1,655,199₫</span>
-                        <span style="text-decoration:line-through; color:#888;">2,069,000₫</span>
-                        <span style="color:#00a650; font-weight: bold;">20% off</span>
+                <!-- CARD 1 -->
+                <div id="productSlider" class="flex gap-6 overflow-x-auto scroll-smooth">
+                    <div class="flex-shrink-0 w-[500px] bg-gray-100 text-center h-[300px]">
+                        <img src="991708d0-6624-498b-ba08-9ab9b297a06d.png" alt="Shoe 1"
+                            class="mx-auto bg-transparent mt-20 mx-auto" />
+                        <p class="mt-9 text-lg font-medium transform -ml-20">Jordan 1 Retro High OG GS
+                            'Chicago' 2015</p>
+                        <p class="text-sm -ml-60 translate-x-5 font-medium text-gray-500">Men's Shoes</p>
+                        <p class="text-lg font-semibold transform translate-x-16 -ml-80 ">3,946,500₫</p>
                     </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="flex-shrink-0 bg-gray-50 p-4 w-44 text-center h-30 relative h-[300px]">
-                    <img src="5a59016d-e70d-460f-adc9-440546cbf7d2.png" alt="NikeShoxTL"
-                        class=" mix-blend-multiply mx-auto h-[180px] -translate-y-9 mt-20">
-                    <p class="text-sm font-medium -translate-y-12">Nike Calm RealTree</p>
-                    <p class="text-sm font-medium mt-4 text-gray-500 translate-x-2 -translate-y-3 -ml-60 ">
-                        Men's
-                        Mules
-                    </p>
-                    <p class="text-xs mt-1 text-gray-700 transform translate-x-12 mt-3 -translate-y-6">
-                        2,349,000₫
-                    </p>
-                </div>
-                <!-- Card 6 -->
-                <div class="flex-shrink-0 bg-gray-50 p-4 w-44 text-center h-[300px] relative">
-                    <img src="349e1369-7726-4e61-9e9a-07117fab8e06.png"
-                        alt="Women's Nike Air Max Plus City Special - Atlanta " class="mx-auto h-[120px] mt-20">
-                    <p class="text-sm font-medium mt-3">Women's Nike Air Max Plus City Special - Atlanta</p>
-                    <p class="text-xs mt-1 text-gray-700 transform translate-x-12 mt-3 -translate-y-4">
-                        $224.99
-                        USD</p>
+
+                    <!-- Card 2 -->
+                    <div class="flex-shrink-0 w-[300px] text-center h-[300px] bg-gray-100">
+                        <img src="761030a7-9e59-4421-ada9-a4fb7b61c96c.png" alt="Air Dunk Low"
+                            class=" mx-auto h-[200px] w-[350px] translate-x-4 translate-y-20 ">
+                        <p class="mt-9 text-xl font-semibold -ml-48 translate-y-20">Nike Total 90</p>
+                        <p class=" text-sm font-medium text-gray-500 -ml-64 translate-x-3 transform translate-y-20">
+                            Men's
+                            Shoes
+                        </p>
+                        <p
+                            class="text-lg font-medium mt-3 text-gray-700 transform -ml-60 translate-x-2 translate-y-16 text-black ">
+                            2,069,000₫
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="flex-shrink-0 w-[300px] text-center h-[300px] bg-gray-300">
+                        <img src="926efa4b-1695-45bd-ae8d-b07af09e8eff.png" alt="Air Force 1"
+                            class=" w-[300px] h-[200px] mx-auto -translate-y-5 mt-20">
+                        <p class="text-xl font-medium mt-8 -ml-40 translate-x-1">Air Jordan Mule</p>
+                        <p class="text-sm font-medium mt-4 text-gray-500 translate-x-1 -translate-y-3 -ml-60 ">
+                            Golf
+                            Shoes
+                        </p>
+                        <p
+                            class=" font-bold text-lg font-medium mt-2 text-gray-700 transform -ml-60 translate-x-3 -translate-y-6 text-black">
+                            3,239,000₫
+                        </p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="flex-shrink-0 w-[300px] text-center h-[300px] bg-gray-100 ">
+                        <img src="d1872a9e-0fbe-41f4-a10d-e3d48d5ba133.png" alt="Nike Air Monarch IV “White/Navy”"
+                            class="w-[300px] h-[200px] mx-auto -translate-y-5 mt-20">
+                        <p class="text-xl font-medium mt-8 -ml-56 translate-x-2 ">Nike Calm</p>
+                        <p class="text-sm font-medium mt-4 text-gray-500 translate-x-2 -translate-y-3 -ml-60 ">
+                            Men's
+                            Mules
+                        </p>
+                        <div
+                            style="position:relative; left:1; text-align:left; margin:0; padding:0; top: -16px; font-size: 18px;">
+                            <span style="text-color:black; font-weight: 500; margin:0;">1,655,199₫</span>
+                            <span style="text-decoration:line-through; color:#888;">2,069,000₫</span>
+                            <span style="color:#00a650; font-weight: bold;">20% off</span>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="flex-shrink-0 bg-gray-50 p-4 w-44 text-center h-30 relative h-[300px]">
+                        <img src="5a59016d-e70d-460f-adc9-440546cbf7d2.png" alt="NikeShoxTL"
+                            class=" mix-blend-multiply mx-auto h-[180px] -translate-y-9 mt-20">
+                        <p class="text-sm font-medium -translate-y-12">Nike Calm RealTree</p>
+                        <p class="text-sm font-medium mt-4 text-gray-500 translate-x-2 -translate-y-3 -ml-60 ">
+                            Men's
+                            Mules
+                        </p>
+                        <p class="text-xs mt-1 text-gray-700 transform translate-x-12 mt-3 -translate-y-6">
+                            2,349,000₫
+                        </p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="flex-shrink-0 bg-gray-50 p-4 w-44 text-center h-[300px] relative">
+                        <img src="349e1369-7726-4e61-9e9a-07117fab8e06.png"
+                            alt="Women's Nike Air Max Plus City Special - Atlanta " class="mx-auto h-[120px] mt-20">
+                        <p class="text-sm font-medium mt-3">Women's Nike Air Max Plus City Special - Atlanta</p>
+                        <p class="text-xs mt-1 text-gray-700 transform translate-x-12 mt-3 -translate-y-4">
+                            $224.99
+                            USD</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -254,33 +265,19 @@
 
     <script>
 
-        const slider = document.getElementById("slider");
-        const dots = document.querySelectorAll(".dot");
-        let current = 0;
+        console.log('JS đang chạy');
+        const slider = document.getElementById('productSlider');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
 
-        function showSlide(index) {
-            if (!slider) return;
-            slider.style.transform = `translateX(-${index * 100}%)`;
-
-            dots.forEach((dot, i) => {
-                dot.classList.toggle("bg-black", i === index);
-                dot.classList.toggle("bg-gray-400", i !== index);
-            });
-        }
-
-        // Khi click dot
-        dots.forEach((dot, index) => {
-            dot.addEventListener("click", () => {
-                current = index;
-                showSlide(current);
-            });
-        });
-
-        // Tự động trượt
-        // setInterval(() => {
-        //     current = (current + 1) % dots.length;
-        //     showSlide(current);
-        // });
+        nextBtn.onclick = () => {
+            console.log('Next clicked');
+            slider.scrollBy({ left: 320, behavior: 'smooth' });
+        };
+        prevBtn.onclick = () => {
+            console.log('Prev clicked');
+            slider.scrollBy({ left: -320, behavior: 'smooth' });
+        };
 
         // Hiệu ứng xuất hiện
         window.addEventListener("load", () => {
